@@ -9,7 +9,7 @@ url = "" # paste website's URL
 html = requests.get(url).text
 soup = BeautifulSoup(html, 'html5lib')
 
-table = soup.find_all('table', {'class': 'wikitable'})[0] # number of the html element. In this case it's the first table with 'wikitable' class
+table = soup.find_all('table', {'class': 'wikitable'})[0] # set number of the html element. In this case it's the first table with 'wikitable' class
 
 output_rows = []
 for table_row in table.findAll('tr'):
