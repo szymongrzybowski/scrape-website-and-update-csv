@@ -24,7 +24,7 @@ def extract_data():
     table = find_data()
 
     output_rows = []
-    for table_row in table.findAll('tr')[2:7]: # range of rows you want scan in search of new ones
+    for table_row in table.findAll('tr')[2:7]: # range of rows you want scan in search of new ones. It's optional
         headers = table_row.findAll('th')
         columns = table_row.findAll('td')
         output_row = []
@@ -65,7 +65,7 @@ def check_data():
 
     col = create_columns()
     for t in data:
-        if t[0] in col[0]: # decision whether to update table or not is made based on the contents of the first and second columnz
+        if t[0] in col[0]: # the decision of whether to update the table or not is made based on the contents of the first and second columns
             if t[1] in col[1]:
                 pass
             else:
