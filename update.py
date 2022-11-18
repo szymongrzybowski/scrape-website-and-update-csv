@@ -8,7 +8,7 @@ df = pd.read_csv(filename, header=None)
 url = "" # paste website's URL
 html = requests.get(url).text
 soup = BeautifulSoup(html, 'html5lib')
-
+                      # set parameters
 table = soup.find_all('table', {'class': 'wikitable'})[0] # set number of the html element. In this case it's the first table with 'wikitable' class
 
 output_rows = []
